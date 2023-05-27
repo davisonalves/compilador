@@ -1,0 +1,23 @@
+<brev> := a | b | c | d | e | f | g | h | i | j | k | l | m | n | o | p | q | r | s | t | u | v | w | x | y | z | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z
+<ciffer> := 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+
+<op.aritmetik> := - | * | / | %
+<op.relationelle> := && | || | < | > | <= | >= | == | !=
+
+<type> := <array> | <objekt> | <boolesk> | <snor> | <nummer>
+<array> := "[" <type> { "," <type> } "]"
+
+<objekt> := { [ <ejendom> { , <ejendom> } ] }
+<ejendom> := <snor> : <type>
+<snor> ::= " ' " <bogstav_eller_cifre>* " ' "
+<bogstav_eller_cifre> := <brev> | <ciffer>
+
+<boolesk> := rigtigt | falsk | 1 | 0
+<nummer> := [ + | - ] <ciffer>+ [ . <ciffer>+ ]
+
+
+<udmelding> := lade | konst
+<opgave> := <identifikator> = <udtryk>
+<identifikator> := <brev> (<brev> | <ciffer>)*
+
+<afslut> := afslut(<brev> | <ciffer> | <objekt> | <identifikator>)

@@ -1,0 +1,9 @@
+lade navne = ['Alice', 'Bob', 'Charlie']
+lade aldre = [25, 30, 35]
+
+udskriv 'Mennesker:'
+til (lade i = 0; i < 3; i++) {
+  udskriv navne[i] + ' han har ' + aldre[i] + ' flere ar '
+}
+
+udskriv 'Finished'
